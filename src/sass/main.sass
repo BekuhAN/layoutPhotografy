@@ -1,0 +1,183 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+/*==========  user style  ==========*/
+
+header
+	background: url('../img/sectionbg-1.jpg')
+	background-size: cover
+	position: relative
+	box-shadow: 0 0 0 1px rgba(#000, .25)
+	&::before
+		content: ''
+		position: absolute
+		bottom: 12px
+		width: 100%
+		height: 2px
+		background: url('../img/line.png')
+
+
+.menu
+	list-style: none
+	margin: 0
+	padding: 0
+	display: flex
+	height: 160px
+	align-items: center
+	font-family: corvettedeco
+	font-size: 42px
+	justify-content: space-between
+	li
+		a
+			transition: .2s
+			color: #f9ebd9
+			text-shadow: 2px 1px 2px rgba(#000, .2)
+			&:hover
+				text-decoration: none
+				color: #d45244
+	.logo
+		width: 180px
+		height: 180px
+		display: flex
+		justify-content: center
+		align-items: center
+		font-size: 72px
+		background: url('../img/logo-bg.png') center
+		background-size: cover
+		position: relative
+		top: 20px
+		font-family: seasideResortnf
+		z-index: 10
+		a
+			margin: 37px
+
+section
+	position: relative
+	padding: 100px 0
+	box-shadow: 0 0 0 2px rgba(#000, .2)
+	.section-title
+		font-family: corvettedeco
+		text-align: center
+		font-size: 100px
+		color: #393a3a
+		font-weight: normal
+		letter-spacing: 2px
+		position: relative
+		margin-bottom: 60px
+		line-height: 1
+		span.main
+			position: relative
+			z-index: 5
+			text-shadow: 2px 1px 0  #fff
+		span.sub
+			position: absolute
+			left: calc(50% + 4px)
+			transform: translateX(-50%)
+			top: 2px
+			z-index: 1
+			
+
+	&::before, &::after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 2px
+		background: url('../img/line.png')
+	&::after
+		top: 12px
+	&::before
+		bottom: 12px
+	&.one
+		background: url('../img/sectionbg-1.jpg')
+		background-size: cover
+		height: calc(100vh - 180px)
+		display: flex
+		align-items: center
+		text-align: center
+		.title
+			font-size: 92px
+			font-family: seasideResortnf
+			margin-bottom: 50px
+			color: #585858
+			position: relative
+			&::before
+				content: attr(data-parent)
+				position: absolute
+				left: 49px
+				top: -2px
+				color: #f9eddf
+		.prof
+			font-size: 32px
+			font-family: corvettedeco
+			letter-spacing: 6px
+			color: #4b4e4c
+			width: 300px
+			height: 55px
+			position: relative
+			left: 50%
+			transform: translateX(-50%)
+			.left, .right
+				position: absolute
+				height: 55px
+				width: 160px
+				top: 15px
+				z-index: 1
+			.left
+				background: url('../img/taperight.png') no-repeat
+				background-size:  auto 100%
+				right: -135px
+			.right
+				background: url('../img/tapeleft.png') no-repeat
+				background-size: auto 100%
+				left: -135px
+			.center
+				position: absolute
+				background: url('../img/tapecenter.jpg')
+				background-size: auto 100%
+				width: 100%
+				height: 100%
+				left: 0
+				top: 0
+				z-index: 10
+				padding-top: 5px
+				box-shadow: 5px 5px 20px 0px rgba(#000, .3)
+				
+		
+
+	&.two
+		background: url('../img/sectionbg-2.jpg')
+		background-size: cover
+		.description
+			font-family: robotoSlabRegular
+			font-size: 18px
+		.photo
+			width: 100%
+			background: #fbfaf6
+			padding: 0
+			border-radius: 3px
+			box-shadow: 2px 2px 6px 0px rgba(#000, .3)
+			figure
+				margin: 6px
+				overflow: hidden
+				display: flex
+				justify-content: center
+				height: 420px;
+				img
+					height: 100%
+					width: auto
+	&.three
+		background: url('../img/sectionbg-3.jpg')
+		background-size: cover
+	&.four
+		background: url('../img/sectionbg-4.jpg')
+		background-size: cover
+	&.five
+		background: url('../img/sectionbg-5.jpg')
+		background-size: cover
+	
+
+
+/*==========  user style  ==========*/
+
+@import "media" // Always at the end
