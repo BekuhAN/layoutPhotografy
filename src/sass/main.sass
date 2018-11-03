@@ -4,6 +4,9 @@
 
 /*==========  user style  ==========*/
 
+*
+	box-sizing: border-box
+
 header
 	background: url('../img/sectionbg-1.jpg')
 	background-size: cover
@@ -126,7 +129,7 @@ section
 			.left
 				background: url('../img/taperight.png') no-repeat
 				background-size:  auto 100%
-				right: -135px
+				right: -138px
 			.right
 				background: url('../img/tapeleft.png') no-repeat
 				background-size: auto 100%
@@ -169,6 +172,73 @@ section
 	&.three
 		background: url('../img/sectionbg-3.jpg')
 		background-size: cover
+		.mix
+			max-width: 292px
+		.filter-item
+			background: #fbfaf6
+			border-radius: 3px
+			padding: 5px
+			margin: 15px 0
+			box-shadow: 2px 2px 6px 0px rgba(#000, .3)
+			figure
+				overflow: hidden
+				display: flex
+				justify-content: center
+				align-items: center
+				height: 300px
+				margin: 0
+				a
+					height: 100%
+					img
+						height: 100%
+		.filter
+			font-size: 18px
+			font-family: robotoSlabRegular
+			margin-bottom: 15px
+			color: #4b4e4c
+			&-btn
+				font-size: 16px
+				font-family: robotoSlabBold
+				display: inline-block
+				width: auto
+				background: #fbfaf6
+				border-radius: 3px
+				padding: 5px 5px 5px 20px
+				position: relative
+				margin-left: 30px
+				box-shadow: 2px 2px 6px 0px rgba(#000, .3)
+				transition: .3s
+				border: none
+				outline: none
+				&:hover
+					background: #d45244
+					color: #fbfaf6
+					&:before
+						background: #d45244	
+				&::before
+					content: '\2022'
+					font-size: 24px
+					display: flex
+					justify-content: center
+					align-items: center
+					position: absolute
+					width: 25px
+					height: 25px
+					background: #fbfaf6
+					border-radius: 3px
+					top: 50%
+					color: #959ca3
+					left: -10px
+					transform: translateY(-50%) rotate(45deg)
+					transition: .3s
+				&.product-control-active
+					&:hover
+						background: #d45244
+						color: #fbfaf6
+						&:before
+							background: #d45244	
+					
+
 	&.four
 		background: url('../img/sectionbg-4.jpg')
 		background-size: cover
