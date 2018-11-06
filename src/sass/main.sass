@@ -34,11 +34,11 @@ header
 	li
 		a
 			transition: .2s
-			color: #f9ebd9
+			color: #f6edd8
 			text-shadow: 2px 1px 2px rgba(#000, .2)
 			&:hover
 				text-decoration: none
-				color: #d45244
+				color: $color-red
 	.logo
 		width: 180px
 		height: 180px
@@ -62,7 +62,7 @@ section
 	.section-title
 		font-family: corvettedeco
 		text-align: center
-		font-size: 100px
+		font-size: 92px
 		color: #393a3a
 		font-weight: normal
 		letter-spacing: 2px
@@ -79,6 +79,11 @@ section
 			transform: translateX(-50%)
 			top: 2px
 			z-index: 1
+			width: 100%
+		&.light
+			color: #f6edd8
+			span.main
+				text-shadow: 2px 1px 0  #393a3a
 			
 
 	&::before, &::after
@@ -109,12 +114,12 @@ section
 				position: absolute
 				left: 49px
 				top: -2px
-				color: #f9eddf
+				color: #f6edd8
 		.prof
 			font-size: 32px
 			font-family: corvettedeco
 			letter-spacing: 6px
-			color: #4b4e4c
+			color: $color-dark
 			width: 300px
 			height: 55px
 			position: relative
@@ -156,7 +161,7 @@ section
 			font-size: 18px
 		.photo
 			width: 100%
-			background: #fbfaf6
+			background: $color-light
 			padding: 0
 			border-radius: 3px
 			box-shadow: 2px 2px 6px 0px rgba(#000, .3)
@@ -175,7 +180,7 @@ section
 		.mix
 			max-width: 292px
 		.filter-item
-			background: #fbfaf6
+			background: $color-light
 			border-radius: 3px
 			padding: 5px
 			margin: 15px 0
@@ -195,13 +200,13 @@ section
 			font-size: 18px
 			font-family: robotoSlabRegular
 			margin-bottom: 15px
-			color: #4b4e4c
+			color: $color-dark
 			&-btn
 				font-size: 16px
 				font-family: robotoSlabBold
 				display: inline-block
 				width: auto
-				background: #fbfaf6
+				background: $color-light
 				border-radius: 3px
 				padding: 5px 5px 5px 20px
 				position: relative
@@ -211,10 +216,10 @@ section
 				border: none
 				outline: none
 				&:hover
-					background: #d45244
-					color: #fbfaf6
+					background: $color-red
+					color: $color-light
 					&:before
-						background: #d45244	
+						background: $color-red	
 				&::before
 					content: '\2022'
 					font-size: 24px
@@ -224,7 +229,7 @@ section
 					position: absolute
 					width: 25px
 					height: 25px
-					background: #fbfaf6
+					background: $color-light
 					border-radius: 3px
 					top: 50%
 					color: #959ca3
@@ -233,19 +238,172 @@ section
 					transition: .3s
 				&.product-control-active
 					&:hover
-						background: #d45244
-						color: #fbfaf6
+						background: $color-red
+						color: $color-light
 						&:before
-							background: #d45244	
-					
+							background: $color-red	
+	.view-all
+		display: flex
+		justify-content: center
+		align-items: center
+		font-family: robotoSlabBold	
+		width: 150px
+		margin: 50px auto 0
+		background: url('../img/sectionbg-5.jpg')
+		height: 50px
+		border-radius: 5px
+		color: $color-light
+		transition: .2s
+		text-decoration: none
+		box-shadow: 2px 2px 6px 0px rgba(#000, .3)
+		&:hover
+			background: url('../img/sectionbg-2.jpg')
+			color: $color-dark
+
 
 	&.four
 		background: url('../img/sectionbg-4.jpg')
 		background-size: cover
+		.blog-item
+			margin-bottom: 30px
+			&-photo
+				background: $color-light
+				padding: 5px
+				border-radius: 3px
+				box-shadow: 2px 2px 6px 0px rgba(#000, .3)
+				figure
+					display: flex
+					justify-content: center
+					align-items: center
+					overflow: hidden 
+					height: 250px
+					margin: 0
+					img
+						height: 100%
+			&-description
+				font-family: robotoSlabBold
+				padding-left: 30px
+				margin-top: 20px
+				color: $color-dark
+				a
+					color: $color-dark
+					text-decoration: none
+					transition: .2s
+					&:hover
+						color: $color-red
+				.title
+					font-size: 24px
+					margin-bottom: 10px
+				.meta
+					font-size: 12px
+					margin-bottom: 30px
+					text-transform: uppercase
+					position: relative
+					&::after
+						content: ''
+						display: block
+						width: 40px
+						height: 3px
+						background: $color-dark
+						position: absolute
+						bottom: -15px
+				.text
+					font-family: robotoSlabRegular
+					.more
+						text-transform: uppercase
+						&:hover
+							color: $color-red
 	&.five
 		background: url('../img/sectionbg-5.jpg')
 		background-size: cover
-	
+		form
+			width: 480px
+			margin: 0 auto
+			.form-item
+				font-family: robotoSlabRegular
+				margin-bottom: 10px
+				border-radius: 3px
+				color: $color-dark
+				height: 40px
+				border: 1px solid #959ca3
+				box-shadow: 2px 2px 6px 0px rgba(#000, .3)
+				outline: none
+				width: 100%
+				padding-left: 10px
+				&::placeholder
+					color: #a9a9a9
+			textarea
+				min-height: 100px	
+				padding-left: 10px
+				min-width: 100%
+				max-width: 100%
+			.send-mail
+				font-family: robotoSlabBold
+				margin-bottom: 10px
+				border-radius: 3px
+				color: $color-dark
+				height: 40px
+				border: none
+				background: #fff
+				box-shadow: 2px 2px 6px 0px rgba(#000, .3)
+				outline: none
+				transition: .2s
+				padding: 0px 20px
+				&:hover
+					background: $color-red
+					color: $color-light
+					cursor: pointer
+	.social-title
+		font-size: 36px
+		text-transform: uppercase
+		font-family: CorvetteDeco
+		color: $color-light
+		text-align: center
+		margin-top: 50px
+		margin-bottom: 30px
+		position: relative
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			bottom: 0px
+			width: 60px
+			height: 2px
+			background: $color-light
+			left: 50%
+			transform: translateX(-50%)
+	.social-icons
+		display: flex
+		justify-content: center
+		align-items: center
+		color: #383a3c
+		font-size: 40px
+		.icon
+			display: block
+			width: 81px
+			height: 81px
+			border-radius: 50%
+			background: $color-light
+			margin-right: 15px
+			display: flex
+			align-items: center
+			justify-content: center
+			position: relative
+			transition: .2s
+			&:hover
+				background: $color-red
+				color: $color-light
+				&::after
+					border-color: $color-light
+			&::after
+				content: ''
+				display: block
+				border: 2px solid $color-dark
+				position: absolute
+				width: 75px
+				height: 75px
+				border-radius: 50%
+
 
 
 /*==========  user style  ==========*/

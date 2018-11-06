@@ -14,11 +14,11 @@
 <header>
 	<nav class="container">
 		<ul class="menu">
-			<li><a href="#">обо мне</a></li>
-			<li><a href="#">портфолио</a></li>
+			<li><a href="#baboutme">обо мне</a></li>
+			<li><a href="#bportfolio">портфолио</a></li>
 			<li class="logo"><a href="index.html">AM</a></li>
-			<li><a href="#">блог</a></li>
-			<li><a href="#">связаться со мной</a></li>
+			<li><a href="#bblog">блог</a></li>
+			<li><a href="#bcontact">связаться со мной</a></li>
 		</ul>
 	</nav>
 </header>
@@ -28,7 +28,7 @@
 		<div class="prof"><span class="right"></span><span class="center">Фотограф</span><span class="left"></span></div>
 	</div>
 </section>
-<section class="two">
+<section id="baboutme" class="two">
 	<div class="container">
 		<h2 class="section-title"><span class="main">Обо мне</span>	<span class="sub">Обо мне</span></h2>
 		<div class="row">
@@ -48,7 +48,7 @@
 		</div>
 	</div>
 </section>
-<section class="three">
+<section id="bportfolio" class="three">
 	<div class="container">
 		<h2 class="section-title"><span class="main">Портфолио</span><span class="sub">Портфолио</span></h2>
 		<div class="row">
@@ -135,11 +135,67 @@
 				</div>
 			</div>
 		</div>
-		<span class="view-all"></span>
+		<a href="#" class="view-all">Открыть все...</a>
 	</div>
 </section>
-<section class="four"></section>1
-<section class="five"></section>
+<section id="bblog" class="four">
+	<div class="container">
+			<h2 class="section-title"><span class="main">Блог</span><span class="sub">Блог</span></h2>
+		<div class="blogs">
+			<div class="blog-item row">
+				<div class="col-4 blog-item-photo">
+					<figure><img src="img/blog-1.jpg" alt="Волшебное Колесо"></figure>
+				</div>
+				<div class="col-8 blog-item-description">
+					<h3 class="title"><a href="single.html">Волшебное Колесо</a></h3>
+					<div class="meta">Май 30, 2018</div>
+					<div class="text">Дело не в том, чтобы понять их в объектах, которые мы играем. Продукты выполняя продукт более новаторский, хрюканье пуль, сильный или пребывание на каждом многомерном пункте времени космоса анализа. Люди имеют огромную последовательную корреляцию. Хороший дизайн получается из такой глубины, и тогда нет другого полезного продукта. <a href="single.html" class="more">(Подробнее...)</a></div>
+				</div>
+			</div>
+			<div class="blog-item row">
+				<div class="col-4 blog-item-photo">
+					<figure><img src="img/blog-2.jpg" alt="Пустынная дорога"></figure>
+				</div>
+				<div class="col-8 blog-item-description">
+					<div class="title"><a href="single.html">Пустынная дорога</a></div>
+					<div class="meta">Май 30, 2018</div>
+					<div class="text">Если вы изучали дизайн вообще, вы, вероятно, сталкивались с текстом-заполнителем Lorem Ipsum в какой-то момент. Везде, где есть текст, но смысл этого текста не особенно важен, вы можете увидеть Lorem Ipsum. <a href="single.html" class="more">(Подробнее...)</a></div>
+				</div>
+			</div>
+			<div class="blog-item row">
+				<div class="col-4 blog-item-photo">
+					<figure><img src="img/blog-3.jpg" alt="Обожаю запах цветов"></figure>
+				</div>
+				<div class="col-8 blog-item-description">
+					<div class="title"><a href="single.html">Обожаю запах цветов</a></div>
+					<div class="meta">Май 30, 2018</div>
+					<div class="text">Много из содержания, и часто о их драгоценной дерновине обладали самими и принципами недостатки видеть и цветов для того чтобы покрыть скудность конструкции. Обнулите свой интерфейс. Я думаю, что эти задачи действительно глубоки и глубоки. <a href="single.html" class="more">(Подробнее...)</a></div>
+				</div>
+			</div>
+		</div>
+		<a href="#" class="view-all">Открыть все...</a>
+	</div>
+</section>
+<section id="bcontact" class="five">
+	<div class="container">
+		<h2 class="section-title light"><span class="main">связаться со мной</span><span class="sub">связаться со мной</span></h2>
+		<form class="row" action="send.php">
+			<input class="form-item" placeholder="Имя" type="text" name="name" id="name">
+			<input class="form-item" placeholder="Электронная почта" type="text" name="email" id="email">
+			<input class="form-item" placeholder="Телефон" type="text" name="phone" id="phone">
+			<textarea class="form-item" placeholder="Сообщение" name="message" id="message"></textarea>
+			<button class="send-mail">Отправить</button>
+		</form>
+		<h3 class="social-title">Я в соц. сетях</h3>
+		<div class="social-icons">
+			<span class="icon"><i class="fa fa-twitter" aria-hidden="true"></i></span>
+			<span class="icon"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+			<span class="icon"><i class="fa fa-google-plus" aria-hidden="true"></i></span>
+			<span class="icon"><i class="fa fa-pinterest" aria-hidden="true"></i></span>
+			<span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+		</div>
+	</div>
+</section>
 
 
 <script src="js/scripts.min.js"></script>
